@@ -1,0 +1,38 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Quotes Website{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Add additional CSS links or styles as needed -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/quotes/english">English Quotes</a></li>
+                <li><a href="/quotes/telugu">Telugu Quotes</a></li>
+                <li><a href="/quotes/hindi">Hindi Quotes</a></li>
+                <li><a href="/quotes/love-english">Love Quotes in English</a></li>
+                <li><a href="/quotes/love-hindi">Love Quotes in Hindi</a></li>
+                <li><a href="/quotes/love-telugu">Love Quotes in Telugu</a></li>
+                <li><a href="/quotes/devotional-english">Devotional Quotes in English</a></li>
+                <li><a href="/quotes/devotional-telugu">Devotional Quotes in Telugu</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+        <!-- Common header content goes here -->
+    </header>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <!-- Common footer content goes here -->
+    </footer>
+</body>
+</html>

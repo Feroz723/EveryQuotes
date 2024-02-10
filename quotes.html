@@ -1,0 +1,13 @@
+<!-- templates/quotes.html -->
+{% extends 'base.html' %}
+
+{% block title %}{{ category }} Quotes{% endblock %}
+
+{% block content %}
+    <h1>{{ category }} Quotes</h1>
+    <ul>
+        {% for quote in quotes %}
+            <li>{{ quote }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
